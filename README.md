@@ -1,5 +1,4 @@
 # 65816-Assembly-TMlanguage
-=========================
 tmLanguage file for 65816 Assembly
 
 ## For Sublime Text

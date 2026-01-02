@@ -1,0 +1,27 @@
+{
+  "name": "w65816-asm",
+  "displayName": "65816 Assembly",
+  "description": "65816 / SNES Assembly language support",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "w65816",
+        "aliases": ["65816 Assembly", "SNES ASM"],
+        "extensions": [".asm", ".inc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "w65816",
+        "scopeName": "source.asm.65816",
+        "path": "./syntaxes/65816.tmLanguage.json"
+      }
+    ]
+  }
+}
