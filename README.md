@@ -4,8 +4,8 @@ tmLanguage file for 65816 Assembly
 ## For Sublime Text
 To install
 - open up Sublime Text 2
-- go to Preferences → Browse Packages (on Mac, it would be Sublime Text 2->Preferences->Browse Packages)
-- copy the '65816 Assembly' folder from this git repo to that folder
+- go to Preferences → Browse Packages (on Mac, it would be Sublime Text 2 → Preferences → Browse Packages)
+- copy the 65816ASM__tmLANGUAGE__forSUBLIMEtext' folder from this git repo to that folder
 - enjoy your syntax highlighting!
 
 ## for VSCode
