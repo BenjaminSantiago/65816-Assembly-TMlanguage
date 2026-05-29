@@ -2,12 +2,17 @@
   "scopeName": "source.asm.65816",
   "fileTypes": ["asm", "inc"],
   "patterns": [
-  	{ "match": ";(.)*",
-  		"name": "comment.line",
-  		"comment": "Comment"
+  	{ "begin": ";",
+  		"beginCaptures": {
+  			"0": { "name": "punctuation.definition.comment.65816" }
+  		},
+    "end"    : "$",
+    "name"   : "comment.line.semicolon.65816",
+    "comment": "Comment"
   	},
-    { "match": "\\b(defaultslot|slotsize|slot|id|name|slowrom|lorom|hirom|cartridgetype|romsize|sramsize|country|licenseecode|version|cop|brk|abort|nmi|irq|reset|irqbrk|semifree|header_off|force|DEFAULTSLOT|SLOTSIZE|SLOT|ID|NAME|SLOWROM|LOROM|HIROM|CARTRIDGETYPE|ROMSIZE|SRAMSIZE|COUNTRY|LICENSEECODE|VERSION|COP|BRK|ABORT|NMI|IRQ|RESET|IRQBRK|SEMIFREE|HEADER_OFF|FORCE)\\b",
-      "name": "keyword.snes",
+    { 
+      "match"  : "\\b(defaultslot|slotsize|slot|id|name|slowrom|lorom|hirom|cartridgetype|romsize|sramsize|country|licenseecode|version|cop|brk|abort|nmi|irq|reset|irqbrk|semifree|header_off|force|DEFAULTSLOT|SLOTSIZE|SLOT|ID|NAME|SLOWROM|LOROM|HIROM|CARTRIDGETYPE|ROMSIZE|SRAMSIZE|COUNTRY|LICENSEECODE|VERSION|COP|BRK|ABORT|NMI|IRQ|RESET|IRQBRK|SEMIFREE|HEADER_OFF|FORCE)\\b",
+      "name"   : "keyword.snes",
       "comment": "SNES Directives"
     },
     { "match": "^[\\s]*\\.[a-zA-Z0-9]*\\b",
@@ -30,7 +35,7 @@
       "name": "constant.numeric.asm",
       "comment": "Value"
     },
-    { "match": "\\b[0-9]*\\b",
+    { "match": "\\b[0-9]+\\b",
       "name": "constant.numeric.dec",
       "comment": "Value"
     },
