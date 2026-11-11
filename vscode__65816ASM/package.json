@@ -1,9 +1,15 @@
 {
   "name": "w65816-asm",
   "displayName": "65816 Assembly",
-  "description": "65816 / SNES Assembly language support",
+  "description": "65816 / SNES assembly syntax highlighting and documented register hovers",
   "version": "0.0.1",
   "publisher": "local",
+  "main": "./extension.js",
+  "activationEvents": ["onLanguage:w65816"],
+  "scripts": {
+    "test": "node --test test/hover.test.cjs",
+    "sync-registers": "node scripts/sync-registers.cjs"
+  },
   "engines": {
     "vscode": "^1.70.0"
   },
